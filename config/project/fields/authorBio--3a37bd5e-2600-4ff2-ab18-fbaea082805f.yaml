@@ -1,0 +1,27 @@
+columnSuffix: njoljosf
+contentColumnType: text
+fieldGroup: 43b1aff8-18d4-4ba3-93ec-d0f2e3415d5b # Globals
+handle: authorBio
+instructions: 'Paste your Bio Here.'
+name: 'Author Bio'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

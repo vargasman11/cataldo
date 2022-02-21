@@ -1,0 +1,58 @@
+dateModified: 1645377358
+email:
+  fromEmail: vargasman11@gmail.com
+  fromName: cataldo
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    0f6e04df-ce19-4a89-b89d-e879e822e087: cataldo # cataldo
+    02a36630-55a8-4e27-bff9-baf27ef9366f: Blog # Blog
+    3a37bd5e-2600-4ff2-ab18-fbaea082805f: 'Author Bio' # Author Bio
+    5b9d684d-5da2-445d-bc48-51b9ae352a6c: 'Page Content' # Page Content
+    6b7954cf-58df-4a94-ac7f-1064c8137e1d: Galleries # Galleries
+    8ba2b35c-4f68-4570-b288-56f2e0dda92b: category # category
+    42ecf3de-1855-4712-8a70-a5ffe8b5b546: Globals # Globals
+    43b1aff8-18d4-4ba3-93ec-d0f2e3415d5b: Globals # Globals
+    082c475d-689f-427b-90b2-a941e80f665b: Gallery # Gallery
+    7637aad2-967f-4c26-8220-284ff09a09ab: cataldo # cataldo
+    7798dd4a-df02-4fb9-bd74-ba5b3861a3b2: Page # Page
+    63286c93-ccf3-4610-a89f-1aeef4ff2dda: Default # Default
+    978256b4-4917-4876-8f86-256ffdfe172e: Default # Default
+    a1686e3d-1865-445a-852d-25a24e433860: 'Gallery Image' # Gallery Image
+    af33e277-8e52-4332-aa0d-9efdbe5fdb0e: Common # Common
+    bb4dae1a-23b5-400a-b7cb-ccf8279434d4: 'Author Image' # Author Image
+    bccbaeb1-4536-435a-8cf9-4fd3ffdf59e6: Uploads # Uploads
+    d20675ef-c5e0-4457-a05d-39531760cc5c: 'Page Enty Image' # Page Enty Image
+    e3d484bd-fc08-4e00-aa53-3d47583daa9f: 'Gallery Images' # Gallery Images
+    e5aeeef1-b40f-4e0b-8f8e-e4b445b9b1a7: 'Author Name' # Author Name
+    e5417985-058f-4465-9fca-c5cdf7815986: Category # Category
+    ee00171d-429b-41c1-8eda-df7ecf4eb46e: Galleries # Galleries
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  redactor-custom-styles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor-split:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor-tweaks:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: cataldo
+  schemaVersion: 3.7.33
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

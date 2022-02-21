@@ -1,0 +1,37 @@
+fieldLayouts:
+  2b1a640b-803b-4f94-885f-d45d6cb1ee3f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3a37bd5e-2600-4ff2-ab18-fbaea082805f # Author Bio
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bb4dae1a-23b5-400a-b7cb-ccf8279434d4 # Author Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e5aeeef1-b40f-4e0b-8f8e-e4b445b9b1a7 # Author Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Author Info'
+        sortOrder: 1
+handle: globals
+name: Globals
+sortOrder: 1

@@ -1,0 +1,19 @@
+columnSuffix: aqetzcun
+contentColumnType: text
+fieldGroup: 43b1aff8-18d4-4ba3-93ec-d0f2e3415d5b # Globals
+handle: authorName
+instructions: ''
+name: 'Author Name'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

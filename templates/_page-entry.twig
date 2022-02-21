@@ -1,0 +1,14 @@
+{% include 'partials/_header.twig' %}
+{% include 'partials/_nav.twig' %}
+<div class="container-fluid page-entry tan-bg py-5">
+	<div class="container border-shadow my-5">
+		<div class="row">
+			<div class="col-12 col-md-10 mx-auto bg-light p-3 my-5">
+				{% block main %}
+					{{ entry.pageContent }}
+				{% endblock %}
+			</div>
+		</div>
+	</div>
+</div>
+{% include 'partials/_footer.twig' %}

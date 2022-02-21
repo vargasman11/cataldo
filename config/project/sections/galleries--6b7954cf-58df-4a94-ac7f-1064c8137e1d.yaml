@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: galleries
+name: Galleries
+propagationMethod: all
+siteSettings:
+  0f6e04df-ce19-4a89-b89d-e879e822e087: # cataldo
+    enabledByDefault: true
+    hasUrls: true
+    template: _galleries.twig
+    uriFormat: galleries
+type: single

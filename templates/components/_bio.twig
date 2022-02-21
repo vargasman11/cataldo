@@ -1,0 +1,10 @@
+	<div class="bio-container" id="bio">
+		{% set images =  globals.authorImage %}
+		{% for img in images %}
+			<img class="" src="{{ img.getUrl }}" alt="{{ img.fileName }}">
+		{% endfor %}
+		<div class="bio-copy">
+			<h1>{{ globals.authorName }}</h1>
+			{{ globals.authorBio }}
+		</div>
+	</div>

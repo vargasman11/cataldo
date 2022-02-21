@@ -1,0 +1,41 @@
+defaultPlacement: end
+fieldLayouts:
+  93b85de9-e380-46b7-bf4a-8b59161da4c9:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: category
+name: category
+siteSettings:
+  0f6e04df-ce19-4a89-b89d-e879e822e087: # cataldo
+    hasUrls: true
+    template: null
+    uriFormat: 'category/{slug}'
+structure:
+  maxLevels: 1
+  uid: 01f86a2c-b5e0-4702-8858-ac29ae114d72

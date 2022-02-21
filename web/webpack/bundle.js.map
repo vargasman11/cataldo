@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;AAA0B","sources":["webpack:///./src/index.js"],"sourcesContent":["import './sass/main.scss';\r\n"],"names":[],"sourceRoot":""}

@@ -1,0 +1,19 @@
+<div id="recent-posts">
+{% set entries = craft.entries().limit(4) %}
+	<ul>
+	{% for entry in entries %}
+	<li>{{ entry.title }}</li>
+	{% endfor %}
+	</ul>
+</div>
+
+<div id="categories">
+	{% set myCategoryQuery = craft.categories() %}
+	{% if myCategoryQuery|length %}
+		<ul>
+			{% for rel in myCategoryQuery %}
+				<li><a href="{{ rel.url }}">{{ rel.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</div>

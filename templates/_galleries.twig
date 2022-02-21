@@ -1,0 +1,22 @@
+{% include 'partials/_header.twig' %}
+{% include 'partials/_nav.twig' %}
+{% block main %}
+<div class="container-fluid page-entry tan-bg py-5">
+	<div class="container border-shadow my-5 bg-light">
+		<div class="row">
+			{% set blocks = entry.galleryImages.all() %}
+			{% for block in blocks %}
+				{% set images = block.galleryImage %}
+				{% for img in images %}
+					<div class="col-12 col-md-6 col-lg-3 mx-auto p-3 my-5">
+						<a class="set-gallery-img-link" href="{{ img.getUrl() }}" data-lightbox="image-{{ loop.index }}"
+						   data-title="{{ img.fileName }}">
+							<img src="{{ img.getUrl() }}" alt="" class="img-fluid">
+						</a>
+					</div>
+				{% endfor %}
+			{% endfor %}
+		</div>
+	</div>
+	{% endblock %}
+{% include 'partials/_footer.twig' %}

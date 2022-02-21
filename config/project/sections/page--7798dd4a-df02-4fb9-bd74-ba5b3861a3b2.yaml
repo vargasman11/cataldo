@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: page
+name: Page
+propagationMethod: all
+siteSettings:
+  0f6e04df-ce19-4a89-b89d-e879e822e087: # cataldo
+    enabledByDefault: true
+    hasUrls: true
+    template: _page-entry.twig
+    uriFormat: 'page/{slug}'
+type: channel
