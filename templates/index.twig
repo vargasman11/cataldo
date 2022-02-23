@@ -1,7 +1,55 @@
 {% include 'partials/_header.twig' %}
 {% include 'partials/_nav.twig' %}
 {% include 'partials/_carousel.twig' %}
-{% block main %}
 
-{% endblock %}
+<div class="container">
+    <div class="row">
+        {% block main %}
+            <div class="col-12 col-lg-8 bg-light p-0 my-5">
+                <div class="container-fluid p-0">
+                    <div class="col-12 p-0">
+                        <h1 class="bg-primary">Hello</h1>
+                    </div>
+                </div>
+
+                <!-- REST OF THE ARTICLES -->
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        {% set Entries = craft.entries().section('blog') %}
+                        {% for entry in Entries %}
+                            <div class="col-12 col-md-6">
+                                <div class="index-card">
+                                    {% set images = entry.pageEntyImage %}
+                                    <a href="">
+                                        {% for img in images %}
+                                            <img class="img-fluid" src="{{ img.getUrl() }}" alt="">
+                                        {% endfor %}
+
+                                        <!-- CAtegory -->
+                                        {% set categories = entry.category %}
+                                        {% if categories|length %}
+                                            {% for rel in categories %}
+                                                <a class="index-card-cat"> {{ rel.title }}</a>
+                                            {% endfor %}
+                                        {% endif %}
+
+                                        <!-- Title -->
+                                        <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+
+                                        <!-- Author -->
+                                        <div class="index-card-auth">by {{ entry.author }} on {{ entry.postDate|date }}</div>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+        {% endblock %}
+        {% include 'components/_sidebar.twig' %}
+    </div>
+</div>
+
 {% include 'partials/_footer.twig' %}

@@ -1,0 +1,26 @@
+.index-card{
+  .index-card-cat{
+    color: #2a3135;
+    border: 2px solid #cdaf88;
+    padding: 4px 6px 4px 6px;
+    letter-spacing: 3px;
+    font-size: 10px;
+    line-height: 13px;
+    margin: 0 2px 25px;
+    text-decoration:none;
+    font-weight: bold;
+    display: inline-block;
+    width: auto;
+    text-transform: uppercase;
+  }
+  h3{
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    a{
+      text-decoration: none;
+      color: #2a3135;
+    }
+  }
+}

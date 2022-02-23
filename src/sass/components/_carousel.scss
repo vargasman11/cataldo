@@ -1,19 +1,41 @@
 #carousel {
-  .carousel_item {
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    a {
-      text-decoration: none !important;
-      color: #ffffff !important;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      h1 {
+  .owl-carousel {
+    .carousel_item {
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+
+      a {
+        text-decoration: none !important;
         color: #ffffff !important;
-        font-size: 1rem;
-        text-align: center;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0,0,0, .5);
+
+        h6 {
+          text-transform: uppercase;
+          margin: 0 0 20px;
+          font-size: 12px;
+          color: #fff !important;
+          border: solid 2px #fff;
+          padding: 5px 15px;
+          display: inline-block;
+        }
+
+        h1 {
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 30px;
+          color: #fff;
+          font-weight: bold !important;
+          line-height: 30px;
+        }
+        p{
+          font-weight: bold;
+        }
       }
     }
   }
