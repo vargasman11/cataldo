@@ -1,0 +1,15 @@
+<div class="container" id="carousel">
+	<div class="row">
+		<div class="col-12">
+			<div class="owl-carousel">
+				{% set Entries = craft.entries().all() %}
+				{% for entry in Entries %}
+					{% set images = entry.pageEntyImage %}
+				<div class="carousel_item" {% for img in images %} style="background-image: url({{ img.getUrl()}})" {% endfor %}>
+				<h1>{{ entry.title }}</h1>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

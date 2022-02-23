@@ -13,9 +13,75 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 600f401e-826d-4a9b-a4ff-6003ca8d4055 # Short Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1e1c76bf-adb2-42c6-8c5a-b7a9e7f3590a # Full Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
 fields:
+  1e1c76bf-adb2-42c6-8c5a-b7a9e7f3590a: # Full Caption
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: fullCaption
+    instructions: 'Expand on the details of the images. Will be shown when the image is clicked and enlarged'
+    name: 'Full Caption'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  600f401e-826d-4a9b-a4ff-6003ca8d4055: # Short Caption
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: shortCaption
+    instructions: 'Caption to be displayed under the picture briefly'
+    name: 'Short Caption'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   a1686e3d-1865-445a-852d-25a24e433860: # Gallery Image
     columnSuffix: null
     contentColumnType: string
@@ -30,12 +96,12 @@ fields:
       allowedKinds: null
       defaultUploadLocationSource: 'volume:bccbaeb1-4536-435a-8cf9-4fd3ffdf59e6' # Uploads
       defaultUploadLocationSubpath: ''
-      limit: ''
+      limit: '1'
       localizeRelations: false
       previewMode: full
       restrictFiles: ''
       selectionLabel: ''
-      showSiteMenu: false
+      showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:bccbaeb1-4536-435a-8cf9-4fd3ffdf59e6' # Uploads
