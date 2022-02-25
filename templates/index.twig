@@ -4,13 +4,36 @@
 
 <div class="container">
     <div class="row">
-        {% block main %}
-            <div class="col-12 col-lg-8 bg-light p-0 my-5">
-                <div class="container-fluid p-0">
-                    <div class="col-12 p-0">
-                        <h1 class="bg-primary">Hello</h1>
+
+        {% set videoEntries = craft.entries().section('blog').limit(1) %}
+        {% for entry in videoEntries %}
+            <div class="col-12 col-lg-8 bg-light p-0 video-featured-entry">
+                <div class="index-card">
+                    {% set categories = entry.category %}
+                    {% if categories|length %}
+                        {% for rel in categories %}
+                            <a class="index-card-cat"> {{ rel.title }}</a>
+                        {% endfor %}
+                    {% endif %}
+                    <h1 class="text-center"><a href="{{ entry.url }}">Hello</a></h1>
+                    <div class="index-card-auth">by {{ entry.author }} on {{ entry.postDate|date }}</div>
+                    <hr>
+                    <a class="index-card-cta" href="{{ entry.url }}">
+                        <ion-icon name="book"></ion-icon>
+                        Read article</a>
+                    <div class="index-card-socials">
+                        <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-pinterest"></ion-icon></a>
+                        <a href=""><ion-icon name="mail"></ion-icon></a>
+                        <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
                     </div>
                 </div>
+            </div>
+        {% endfor %}
+        {% block main %}
+
+            <div class="col-12 col-lg-8 bg-light p-0 my-5">
 
                 <!-- REST OF THE ARTICLES -->
                 <div class="container-fluid p-0">
@@ -20,24 +43,33 @@
                             <div class="col-12 col-md-6">
                                 <div class="index-card">
                                     {% set images = entry.pageEntyImage %}
-                                    <a href="">
+                                    <a href="{{ entry.url }}">
                                         {% for img in images %}
                                             <img class="img-fluid" src="{{ img.getUrl() }}" alt="">
                                         {% endfor %}
 
-                                        <!-- CAtegory -->
-                                        {% set categories = entry.category %}
-                                        {% if categories|length %}
-                                            {% for rel in categories %}
-                                                <a class="index-card-cat"> {{ rel.title }}</a>
-                                            {% endfor %}
-                                        {% endif %}
+                                        <div class="index-card-text-container">
+                                            <!-- Category -->
+                                            {% set categories = entry.category %}
+                                            {% if categories|length %}
+                                                {% for rel in categories %}
+                                                    <a class="index-card-cat"> {{ rel.title }}</a>
+                                                {% endfor %}
+                                            {% endif %}
 
-                                        <!-- Title -->
-                                        <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+                                            <!-- Title -->
+                                            <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
 
-                                        <!-- Author -->
-                                        <div class="index-card-auth">by {{ entry.author }} on {{ entry.postDate|date }}</div>
+                                            <!-- Author -->
+                                            <div class="index-card-auth">by {{ entry.author }}
+                                                on {{ entry.postDate|date }}</div>
+                                            <div class="index-card-content">
+                                                {{ entry.pageContent|striptags|truncate(100) }}
+                                            </div>
+                                            <a class="index-card-cta" href="{{ entry.url }}">
+                                                <ion-icon name="book"></ion-icon>
+                                                Read article</a>
+                                        </div>
                                     </a>
                                 </div>
                             </div>
@@ -45,8 +77,6 @@
                     </div>
                 </div>
             </div>
-
-
         {% endblock %}
         {% include 'components/_sidebar.twig' %}
     </div>
