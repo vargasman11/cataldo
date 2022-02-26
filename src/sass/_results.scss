@@ -1,0 +1,19 @@
+.results {
+  .results-col{
+    height: fit-content;
+  }
+  .results-list {
+    list-style: none;
+
+    li {
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+      a:hover{
+        color: #cdaf88;
+      }
+    }
+  }
+}

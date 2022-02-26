@@ -1,0 +1,33 @@
+{% include 'partials/_header.twig' %}
+{% include 'partials/_nav.twig' %}
+
+<div class="container-fluid px-0 results tan-bg">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto bg-light border-shadow p-3 my-5 results-col">
+
+                <h1 class="text-center">Search Results</h1>
+
+                {% set searchQuery = craft.app.request.getParam('q') %}
+                {% set entries = craft.entries()
+                    .search(searchQuery)
+                    .orderBy('score')
+                    .all() %}
+
+                {% if entries|length %}
+                    <p class="display-5">{{ entries|length }} results:</p>
+
+                    <ul class="results-list">
+                        {% for entry in entries %}
+                            <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Your search for “{{ searchQuery }}” didn’t return any results.</p>
+                {% endif %}
+            </div>
+            {% include 'components/_sidebar.twig' %}
+        </div>
+    </div>
+
+{% include 'partials/_footer.twig' %}
