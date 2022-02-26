@@ -1,19 +1,64 @@
-<div id="recent-posts">
-{% set entries = craft.entries().limit(4) %}
-	<ul>
-	{% for entry in entries %}
-	<li>{{ entry.title }}</li>
-	{% endfor %}
-	</ul>
-</div>
+<div class="container-fluid my-5" id="recent-posts">
+    <!-- POSTS -->
+    <div class="row py-3">
+        <div class="col-12">
+            <div class="sidebar-title"><span class="gold-line"></span>recent posts<span class="gold-line"></span></div>
+            {% set entries = craft.entries().limit(4) %}
+            <ul>
+                {% for entry in entries %}
+                    <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
 
-<div id="categories">
-	{% set myCategoryQuery = craft.categories() %}
-	{% if myCategoryQuery|length %}
-		<ul>
-			{% for rel in myCategoryQuery %}
-				<li><a href="{{ rel.url }}">{{ rel.title }}</a></li>
-			{% endfor %}
-		</ul>
-	{% endif %}
+    </div>
+
+    <!-- RECENT COMMENTS -->
+    <div class="row py-3">
+        <div class="col-12">
+            <div class="sidebar-title"><span class="gold-line"></span>recent comments<span class="gold-line"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="row py-3">
+        <div class="col-12">
+            <div class="sidebar-title"><span class="gold-line"></span>Categories<span class="gold-line"></span></div>
+            {% set myCategoryQuery = craft.categories() %}
+            {% if myCategoryQuery|length %}
+                <ul>
+                    {% for rel in myCategoryQuery %}
+                        <li><a href="{{ rel.url }}">{{ rel.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Follow SOCIALS -->
+    <div class="row py-3">
+        <div class="col-12">
+            <div class="sidebar-title"><span class="gold-line"></span>follow us<span class="gold-line"></span></div>
+            <div class="socials">
+                <a href="">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="">
+                    <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+                <a href="">
+                    <ion-icon name="mail"></ion-icon>
+                </a>
+                <a href="">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
 </div>

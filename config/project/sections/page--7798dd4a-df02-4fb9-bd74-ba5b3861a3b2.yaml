@@ -8,5 +8,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _page-entry.twig
-    uriFormat: 'page/{slug}'
+    uriFormat: '{slug}'
 type: channel

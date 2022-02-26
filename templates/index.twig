@@ -4,10 +4,9 @@
 
 <div class="container">
     <div class="row">
-
-        {% set videoEntries = craft.entries().section('blog').limit(1) %}
-        {% for entry in videoEntries %}
-            <div class="col-12 col-lg-8 bg-light p-0 video-featured-entry">
+        <div class="col-12 col-lg-8 bg-light p-0 video-featured-entry">
+            {% set videoEntries = craft.entries().section('blog').limit(1) %}
+            {% for entry in videoEntries %}
                 <div class="index-card">
                     {% set categories = entry.category %}
                     {% if categories|length %}
@@ -22,25 +21,33 @@
                         <ion-icon name="book"></ion-icon>
                         Read article</a>
                     <div class="index-card-socials">
-                        <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href=""><ion-icon name="logo-pinterest"></ion-icon></a>
-                        <a href=""><ion-icon name="mail"></ion-icon></a>
-                        <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                        <a href="">
+                            <ion-icon name="logo-pinterest"></ion-icon>
+                        </a>
+                        <a href="">
+                            <ion-icon name="mail"></ion-icon>
+                        </a>
+                        <a href="">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-        {% block main %}
-
-            <div class="col-12 col-lg-8 bg-light p-0 my-5">
+            {% endfor %}
+{#            <div class="col-12 col-lg-8 bg-light p-0 my-5">#}
+            <div class="col-12 bg-light p-0 my-5">
 
                 <!-- REST OF THE ARTICLES -->
                 <div class="container-fluid p-0">
                     <div class="row">
                         {% set Entries = craft.entries().section('blog') %}
                         {% for entry in Entries %}
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-xl-6">
                                 <div class="index-card">
                                     {% set images = entry.pageEntyImage %}
                                     <a href="{{ entry.url }}">
@@ -77,6 +84,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        {% block main %}
+
         {% endblock %}
         {% include 'components/_sidebar.twig' %}
     </div>

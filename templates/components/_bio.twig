@@ -1,10 +1,14 @@
-	<div class="bio-container" id="bio">
-		{% set images =  globals.authorImage %}
-		{% for img in images %}
-			<img class="" src="{{ img.getUrl }}" alt="{{ img.fileName }}">
-		{% endfor %}
-		<div class="bio-copy">
-			<h1>{{ globals.authorName }}</h1>
-			{{ globals.authorBio }}
-		</div>
-	</div>
+<div class="bio-container container-fluid" id="bio">
+    <div class="row">
+        <div class="col-12">
+            {% set images =  globals.authorImage %}
+            {% for img in images %}
+                <img class="" src="{{ img.getUrl }}" alt="{{ img.fileName }}">
+            {% endfor %}
+            <div class="bio-copy">
+                <h1>{{ globals.authorName }}</h1>
+                {{ globals.authorBio }}
+            </div>
+        </div>
+    </div>
+</div>
