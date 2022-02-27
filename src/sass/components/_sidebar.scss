@@ -1,8 +1,10 @@
 #sidebar {
   margin-left: auto;
+  height: fit-content;
 
   #bio {
     position: relative;
+    margin-bottom: 3rem;
 
     h1 {
       margin-top: 30px;

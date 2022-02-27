@@ -1,6 +1,6 @@
 <div class="bio-container container-fluid" id="bio">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 border-shadow">
             {% set images =  globals.authorImage %}
             {% for img in images %}
                 <img class="" src="{{ img.getUrl }}" alt="{{ img.fileName }}">

@@ -1,8 +1,9 @@
-<div class="container-fluid my-5" id="recent-posts">
+<div class="container-fluid my-5 " id="recent-posts">
 
-    <!-- SEARCH FORM -->
-    <div class="row py-3">
-        <div class="col-12">
+    <div class="recent-posts-container border-shadow row">
+
+        <!-- SEARCH FORM -->
+        <div class="col-12 pt-3">
             <form action="{{ url('search/results') }}">
                 <div class="input-group">
                     <input class="form-control" type="search" name="q" aria-label="Search" placeholder="Search">
@@ -10,35 +11,31 @@
                 </div>
             </form>
         </div>
-    </div>
 
 
-    <!-- POSTS -->
-    <div class="row py-3">
-        <div class="col-12">
-            <div class="sidebar-title"><span class="gold-line"></span>recent posts<span class="gold-line"></span></div>
+        <!-- POSTS -->
+        <div class="col-12 py-4">
+            <div class="sidebar-title"><span class="gold-line"></span>recent posts<span class="gold-line"></span>
+            </div>
             {% set entries = craft.entries().limit(4) %}
             <ul>
                 {% for entry in entries %}
                     <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
                 {% endfor %}
             </ul>
+
         </div>
 
-    </div>
-
-    <!-- RECENT COMMENTS -->
-    <div class="row py-3">
-        <div class="col-12">
+        <!-- RECENT COMMENTS -->
+        <div class="col-12 py-4">
             <div class="sidebar-title"><span class="gold-line"></span>recent comments<span class="gold-line"></span>
             </div>
         </div>
-    </div>
 
-    <!-- Categories -->
-    <div class="row py-3">
-        <div class="col-12">
-            <div class="sidebar-title"><span class="gold-line"></span>Categories<span class="gold-line"></span></div>
+        <!-- Categories -->
+        <div class="col-12 py-2">
+            <div class="sidebar-title"><span class="gold-line"></span>Categories<span class="gold-line"></span>
+            </div>
             {% set myCategoryQuery = craft.categories() %}
             {% if myCategoryQuery|length %}
                 <ul>
@@ -48,10 +45,8 @@
                 </ul>
             {% endif %}
         </div>
-    </div>
 
-    <!-- Follow SOCIALS -->
-    <div class="row py-3">
+        <!-- Follow SOCIALS -->
         <div class="col-12">
             <div class="sidebar-title"><span class="gold-line"></span>follow us<span class="gold-line"></span></div>
             <div class="socials">
