@@ -3,10 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-.index-card{
-  padding: 3rem;
-}
-  .index-card-cat {
+
+  .index-card {
+    //padding: 3rem;
+  }
+
+  .index-card-cta {
     margin-left: auto;
     margin-right: auto;
   }
@@ -22,18 +24,25 @@
     }
   }
 
-  hr{
+  hr {
     background-color: #cdaf88;
     width: 80%;
     height: 2px;
   }
 
-  .index-card-socials{
-    a{
+  .index-card-socials {
+    a {
       color: #cdaf88;
       padding: 0 3px;
+      text-decoration: none !important;
+
+      ion-icon {
+        color: #cdaf88;
+      }
+    }
+    a:hover{
       ion-icon{
-        color:#cdaf88;
+        color: #000000;
       }
     }
   }
@@ -89,16 +98,20 @@
     letter-spacing: 1px !important;
     font-size: 10px;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: none !important;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1.5rem 0;
 
-    ion-icon {
-      color: #cdaf88;
-      padding: 0 5px;
+    a {
+      text-decoration: none !important;
+      ion-icon {
+        color: #cdaf88;
+        padding: 0 5px;
+        //text-decoration-line: none !important;
+      }
     }
   }
 

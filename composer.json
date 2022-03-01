@@ -4,6 +4,7 @@
     "craftcms/cms": "^3.7.26",
     "craftcms/redactor": "2.10.3",
     "venveo/craft-redactor-split": "1.1.1",
+    "verbb/comments": "1.9.2",
     "verbb/redactor-tweaks": "2.0.4",
     "vlucas/phpdotenv": "^5.4.0"
   },

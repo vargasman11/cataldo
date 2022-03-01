@@ -17,11 +17,36 @@
                 {% if entries|length %}
                     <p class="display-5">{{ entries|length }} results:</p>
 
-                    <ul class="results-list">
+{#                    <ul class="results-list">#}
                         {% for entry in entries %}
+                            <div class="row">
+                                <!-- LEFT SIDE -->
+                                <div class="col-12 col-md-4">
+                                    {% set images = entry.pageEntyImage %}
+                                        {% for img in images %}
+                                            <img class="img-fluid" src="{{ img.getUrl() }}" alt="">
+                                        {% endfor %}
+                                </div>
+
+                                <!-- RIGHT SIDE -->
+                                <div class="col-12 col-md-8">
+                                    <!-- Category -->
+                                    {% set relatedCategories = entry.category.all() %}
+                                    {% if relatedCategories|length %}
+                                        {% for rel in relatedCategories %}
+                                            <div class="text-center">
+                                                <a class="category">{{ rel.title }}</a>
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <!-- TITLE -->
+                                    <h3 class="text-center py-3">{{ entry.title }}</h3>
+                                </div>
+                            </div>
                             <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+
                         {% endfor %}
-                    </ul>
+{#                    </ul>#}
                 {% else %}
                     <p>Your search for “{{ searchQuery }}” didn’t return any results.</p>
                 {% endif %}

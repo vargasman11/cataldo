@@ -4,10 +4,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-8 bg-light p-0 video-featured-entry">
+        <div class="col-12 col-lg-8  p-0 video-featured-entry">
             {% set videoEntries = craft.entries().section('blog').limit(1) %}
             {% for entry in videoEntries %}
-                <div class="index-card">
+                <div class="index-card p-5">
                     {% set categories = entry.category %}
                     {% if categories|length %}
                         {% for rel in categories %}
@@ -39,8 +39,8 @@
                     </div>
                 </div>
             {% endfor %}
-{#            <div class="col-12 col-lg-8 bg-light p-0 my-5">#}
-            <div class="col-12 bg-light p-0 my-5">
+            {# <div class="col-12 col-lg-8 bg-light p-0 my-5"> #}
+            <div class="col-12  p-0 my-5">
 
                 <!-- REST OF THE ARTICLES -->
                 <div class="container-fluid p-0">

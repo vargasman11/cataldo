@@ -1,42 +1,64 @@
 {% include 'partials/_header.twig' %}
 {% include 'partials/_nav.twig' %}
 <div class="container-fluid page-entry tan-bg py-5 blog-entry">
-	<div class="container my-5">
-		<div class="row">
-			{% block main %}
-				<div class="col-12 col-lg-8 bg-light p-0">
+    <div class="container my-5">
+        <div class="row">
+            {% block main %}
+                <div class="col-12 col-lg-8 bg-light p-0">
 
-					<!-- SET IMAGES -->
-					{% set images = entry.pageEntyImage %}
-					<div class="img-container" {% for img in images %} style="background-image: url({{ img.url }})" {% endfor %}></div>
+                    <!-- SET IMAGES -->
+                    {% set images = entry.pageEntyImage %}
+                    <div class="img-container" {% for img in images %} style="background-image: url({{ img.url }})" {% endfor %}></div>
 
-					<!-- SET CATEGORY -->
-					{% set relatedCategories = entry.category.all() %}
-					{% if relatedCategories|length %}
-						{% for rel in relatedCategories %}
-							<div class="my-5 text-center">
-								<a class="category">{{ rel.title }}</a>
-							</div>
-						{% endfor %}
-					{% endif %}
+                    <!-- SET CATEGORY -->
+                    {% set relatedCategories = entry.category.all() %}
+                    {% if relatedCategories|length %}
+                        {% for rel in relatedCategories %}
+                            <div class="my-5 text-center">
+                                <a class="category">{{ rel.title }}</a>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
 
-					<!-- Title -->
-					<h1 class="entry-title text-center">{{ entry.title }}</h1>
+                    <!-- Title -->
+                    <h1 class="entry-title text-center">{{ entry.title }}</h1>
 
-					<!-- Author line -->
-					<div class="text-center my-3">
-						<span class="by-line"> by {{ globals.authorName }} on {{ entry.postDate|date('long') }}</span>
-					</div>
+                    <!-- Author line -->
+                    <div class="text-center my-3">
+                        <span class="by-line"> by {{ globals.authorName }} on {{ entry.postDate|date('long') }}</span>
+                    </div>
 
-					<!-- CONTENT -->
-					<div class="p-5">
-						{{ entry.pageContent }}
-					</div>
+                    <!-- VIDEO EMBED IF THERE IS ONE -->
+                    {% if entry.videoEmbed|length %}
+                        <div class="pt-5 px-5">
+                            <div class="ratio ratio-16x9">
+                            {{ entry.videoEmbed|raw }}
+                            </div>
+                        </div>
+                    {% endif %}
 
-				</div>
-			{% endblock %}
-			{% include 'components/_sidebar.twig' %}
-		</div>
-	</div>
+                    <!-- CONTENT -->
+                    <div class="p-5">
+                        {{ entry.pageContent }}
+                    </div>
+
+
+                </div>
+            {% endblock %}
+
+            {% include 'components/_sidebar.twig' %}
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8 bg-light p-0">
+                <div class="p-5">
+                    <h1 class="text-center">Comments</h1>
+                    {{ craft.comments.render(entry.id) }}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% include 'partials/_footer.twig' %}

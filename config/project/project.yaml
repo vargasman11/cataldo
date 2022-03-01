@@ -1,4 +1,8 @@
-dateModified: 1645831646
+comments:
+  comments:
+    fieldLayouts:
+      b95bad66-4d66-4ac6-a1ea-37e1a69fe7fe: null
+dateModified: 1646100112
 email:
   fromEmail: vargasman11@gmail.com
   fromName: cataldo
@@ -20,16 +24,84 @@ meta:
     7798dd4a-df02-4fb9-bd74-ba5b3861a3b2: Page # Page
     63286c93-ccf3-4610-a89f-1aeef4ff2dda: Default # Default
     978256b4-4917-4876-8f86-256ffdfe172e: Default # Default
+    a79ad683-3a03-4fe2-920c-4b25c26bd7fc: Videos # Videos
     a1686e3d-1865-445a-852d-25a24e433860: 'Gallery Image' # Gallery Image
     af33e277-8e52-4332-aa0d-9efdbe5fdb0e: Common # Common
     bb4dae1a-23b5-400a-b7cb-ccf8279434d4: 'Author Image' # Author Image
     bccbaeb1-4536-435a-8cf9-4fd3ffdf59e6: Uploads # Uploads
+    c3569781-d326-4dfa-8d53-ba57a0197882: Default # Default
     d20675ef-c5e0-4457-a05d-39531760cc5c: 'Page Enty Image' # Page Enty Image
+    ddd8a27a-43c8-4331-b6ae-4b64ada36fac: 'Video Embed' # Video Embed
     e3d484bd-fc08-4e00-aa53-3d47583daa9f: 'Gallery Images' # Gallery Images
     e5aeeef1-b40f-4e0b-8f8e-e4b445b9b1a7: 'Author Name' # Author Name
     e5417985-058f-4465-9fca-c5cdf7815986: Category # Category
     ee00171d-429b-41c1-8eda-df7ecf4eb46e: Galleries # Galleries
 plugins:
+  comments:
+    enabled: true
+    licenseKey: HPUA3UW9PJORAAMHEU3JDFQH
+    settings:
+      allowAnonymous: null
+      allowAnonymousFlagging: null
+      allowAnonymousVoting: null
+      allowFlagging: true
+      allowGuest: false
+      allowGuestFlagging: false
+      allowGuestVoting: false
+      allowVoting: true
+      autoCloseDays: ''
+      closed: null
+      defaultQueryStatus:
+        - approved
+      downvoteCommentLimit: 5
+      enableGravatar: false
+      enableSpamChecks: true
+      flaggedCommentLimit: 5
+      guestNotice: ''
+      guestRequireEmailName: true
+      guestShowEmailName: true
+      hideVotingForThreshold: false
+      indexSidebarGroup: true
+      indexSidebarIndividualElements: false
+      indexSidebarLimit: 25
+      maxReplyDepth: null
+      maxUserComments: null
+      moderatorUserGroup: null
+      notificationAdminEnabled: false
+      notificationAuthorEnabled: true
+      notificationFlaggedEnabled: false
+      notificationModeratorApprovedEnabled: false
+      notificationModeratorEnabled: false
+      notificationReplyEnabled: true
+      notificationSubscribeAuto: false
+      notificationSubscribeCommentEnabled: false
+      notificationSubscribeDefault: true
+      notificationSubscribeEnabled: false
+      outputDefaultCss: true
+      outputDefaultJs: true
+      permissions: null
+      placeholderAvatar: null
+      recaptchaEnabled: false
+      recaptchaKey: null
+      recaptchaSecret: null
+      requireModeration: true
+      securityBanned: null
+      securityFlooding: null
+      securityMatchExact: false
+      securityMaxLength: null
+      securityModeration: null
+      securitySpamlist: null
+      showAvatar: true
+      showCustomFieldInstructions: false
+      showCustomFieldNames: false
+      showTimeAgo: true
+      sortDefaultDirection: asc
+      sortDefaultKey: structure
+      structureUid: a974b5c0-0685-4d06-bff8-7561f63d4140
+      templateEmail: null
+      templateFolderOverride: null
+      useQueueForNotifications: false
+      users: null
   redactor:
     edition: standard
     enabled: true
