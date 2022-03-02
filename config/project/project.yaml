@@ -1,8 +1,8 @@
 comments:
   comments:
     fieldLayouts:
-      b95bad66-4d66-4ac6-a1ea-37e1a69fe7fe: null
-dateModified: 1646100112
+      153fca90-8924-45d6-ab2c-cb144c27426b: null
+dateModified: 1646189767
 email:
   fromEmail: vargasman11@gmail.com
   fromName: cataldo
@@ -97,7 +97,7 @@ plugins:
       showTimeAgo: true
       sortDefaultDirection: asc
       sortDefaultKey: structure
-      structureUid: a974b5c0-0685-4d06-bff8-7561f63d4140
+      structureUid: 81238b71-adc1-4b01-9efa-6d9e0a71939d
       templateEmail: null
       templateFolderOverride: null
       useQueueForNotifications: false
