@@ -5,7 +5,7 @@
         <div class="col-12 col-lg-8  p-0 video-featured-entry d-block">
             {% set videoEntries = craft.entries().section('videos').all() %}
             {% for entry in videoEntries %}
-                <div class="index-card">
+                <div class="index-card py-5">
                     {% set categories = entry.category %}
                     {% if categories|length %}
                         {% for rel in categories %}

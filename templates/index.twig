@@ -2,7 +2,7 @@
 {% include 'partials/_nav.twig' %}
 {% include 'partials/_carousel.twig' %}
 
-<div class="container">
+<div class="container px-5">
     <div class="row">
         <div class="col-12 col-lg-8  p-0 video-featured-entry">
             {% set videoEntries = craft.entries().section('blog').limit(1) %}
@@ -52,7 +52,7 @@
                                     {% set images = entry.pageEntyImage %}
                                     <a href="{{ entry.url }}">
                                         {% for img in images %}
-                                            <img class="img-fluid" src="{{ img.getUrl() }}" alt="">
+                                            <img class="img-fluid" src="{{ img.getUrl() }}" alt="{{ img.fileName }}" style="width: 100%">
                                         {% endfor %}
 
                                         <div class="index-card-text-container">

@@ -1,5 +1,9 @@
 #parallax{
-  img{
-    transform: translateY(-35%);
-  }
+  //img{
+  //  transform: translateY(-35%);
+  //}
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+background-image: url("../images/Masada2LogoCentered.jpg");
 }
