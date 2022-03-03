@@ -1,0 +1,12 @@
+tabs:
+  -
+    elements:
+      -
+        instructions: null
+        label: __blank__
+        required: true
+        tip: null
+        type: verbb\comments\fieldlayoutelements\CommentsField
+        warning: null
+    name: Content
+    sortOrder: 1

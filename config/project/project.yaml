@@ -1,8 +1,4 @@
-comments:
-  comments:
-    fieldLayouts:
-      153fca90-8924-45d6-ab2c-cb144c27426b: null
-dateModified: 1646189767
+dateModified: 1646276251
 email:
   fromEmail: vargasman11@gmail.com
   fromName: cataldo
@@ -15,6 +11,7 @@ meta:
     3a37bd5e-2600-4ff2-ab18-fbaea082805f: 'Author Bio' # Author Bio
     5b9d684d-5da2-445d-bc48-51b9ae352a6c: 'Page Content' # Page Content
     6b7954cf-58df-4a94-ac7f-1064c8137e1d: Galleries # Galleries
+    6ccefa7f-ee06-4420-8548-da5867487510: 'Public Schema' # Public Schema
     8ba2b35c-4f68-4570-b288-56f2e0dda92b: category # category
     42ecf3de-1855-4712-8a70-a5ffe8b5b546: Globals # Globals
     43b1aff8-18d4-4ba3-93ec-d0f2e3415d5b: Globals # Globals
@@ -40,6 +37,7 @@ plugins:
   comments:
     enabled: true
     licenseKey: HPUA3UW9PJORAAMHEU3JDFQH
+    schemaVersion: 1.1.7
     settings:
       allowAnonymous: null
       allowAnonymousFlagging: null
