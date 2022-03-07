@@ -12,7 +12,7 @@
                             <a class="index-card-cat"> {{ rel.title }}</a>
                         {% endfor %}
                     {% endif %}
-                    <h1 class="text-center"><a href="{{ entry.url }}">Hello</a></h1>
+                    <h1 class="text-center"><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
                     <div class="index-card-auth">by {{ entry.author }} on {{ entry.postDate|date }}</div>
                     <hr>
                     <a class="index-card-cta" href="{{ entry.url }}">
