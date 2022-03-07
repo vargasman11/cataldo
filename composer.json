@@ -1,8 +1,8 @@
 {
   "require": {
     "carlcs/craft-redactorcustomstyles": "3.0.4",
-    "craftcms/cms": "^3.7.26",
-    "craftcms/redactor": "2.10.3",
+    "craftcms/cms": "3.7.36",
+    "craftcms/redactor": "2.10.5",
     "venveo/craft-redactor-split": "1.1.1",
     "verbb/comments": "1.9.2",
     "verbb/redactor-tweaks": "2.0.4",

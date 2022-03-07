@@ -1,8 +1,14 @@
-dateModified: 1646276251
+dateModified: 1646360809
 email:
-  fromEmail: vargasman11@gmail.com
-  fromName: cataldo
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: takeacloserlookministries1@gmail.com
+  fromName: takeacloserlookministries1@gmail.com
+  replyToEmail: takeacloserlookministries1@gmail.com
+  template: null
+  transportSettings:
+    password: Microsoft1!
+    timeout: '10'
+    username: takeacloserlookministries1@gmail.com
+  transportType: craft\mail\transportadapters\Gmail
 meta:
   __names__:
     0f6e04df-ce19-4a89-b89d-e879e822e087: cataldo # cataldo
