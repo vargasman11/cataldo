@@ -1,4 +1,4 @@
-dateModified: 1646360809
+dateModified: 1646792893
 email:
   fromEmail: takeacloserlookministries1@gmail.com
   fromName: takeacloserlookministries1@gmail.com
@@ -33,6 +33,7 @@ meta:
     bb4dae1a-23b5-400a-b7cb-ccf8279434d4: 'Author Image' # Author Image
     bccbaeb1-4536-435a-8cf9-4fd3ffdf59e6: Uploads # Uploads
     c3569781-d326-4dfa-8d53-ba57a0197882: Default # Default
+    ce222518-5ebc-42f6-a628-f0f1378d4281: 'SEO Settings' # SEO Settings
     d20675ef-c5e0-4457-a05d-39531760cc5c: 'Page Enty Image' # Page Enty Image
     ddd8a27a-43c8-4331-b6ae-4b64ada36fac: 'Video Embed' # Video Embed
     e3d484bd-fc08-4e00-aa53-3d47583daa9f: 'Gallery Images' # Gallery Images
@@ -122,6 +123,56 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.11
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: false
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 'null'
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+        - linkedin
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: '1'
+      truncateTitleTags: '1'
 system:
   edition: solo
   live: true

@@ -1,0 +1,21 @@
+columnSuffix: pzkxnefr
+contentColumnType: text
+fieldGroup: af33e277-8e52-4332-aa0d-9efdbe5fdb0e # Common
+handle: seoSettings
+instructions: 'This is where you configure your SEO settings for your entries'
+name: 'SEO Settings'
+searchable: false
+settings:
+  elementDisplayPreviewType: google
+  facebookTabEnabled: ''
+  generalEnabledFields:
+    - seoPreview
+    - seoTitle
+    - seoDescription
+    - seoImage
+  generalTabEnabled: '1'
+  sitemapTabEnabled: ''
+  twitterTabEnabled: ''
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\seomatic\fields\SeoSettings
