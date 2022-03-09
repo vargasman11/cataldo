@@ -5,11 +5,15 @@
         <div class="col-12 col-lg-8  p-0 video-featured-entry d-block">
             {% set videoEntries = craft.entries().section('videos').all() %}
             {% for entry in videoEntries %}
-                <div class="index-card py-5">
+                <div class="index-card pb-5">
+                    {% set images = entry.pageEntyImage %}
+                    <a href="{{ entry.url }}" style=" background-image: url('{% for img in images %}{{ img.getUrl() }}{% endfor %}'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 28vh; width: 100%;">
+                    </a>
+
                     {% set categories = entry.category %}
                     {% if categories|length %}
                         {% for rel in categories %}
-                            <a class="index-card-cat"> {{ rel.title }}</a>
+                            <a class="index-card-cat mt-5"> {{ rel.title }}</a>
                         {% endfor %}
                     {% endif %}
                     <h1 class="text-center"><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
@@ -17,21 +21,21 @@
                     <hr>
                     <a class="index-card-cta" href="{{ entry.url }}">
                         <ion-icon name="book"></ion-icon>
-                        View</a>
+                        &nbsp; View</a>
                     <div class="index-card-socials">
-                        <a href="">
+                        <a href="https://www.facebook.com/TakeACloserLookMinistries1/" target="_blank">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
-                        <a href="">
-                            <ion-icon name="logo-twitter"></ion-icon>
+                        <a href="https://m.youtube.com/channel/UCRCsP7R_HPvW8cG0rSMYvYg" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon>
                         </a>
-                        <a href="">
-                            <ion-icon name="logo-pinterest"></ion-icon>
+                        <a href="https://www.instagram.com/ryan.cataldo.3/" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
                         </a>
-                        <a href="">
+                        <a href="mailto:?subject=I wanted to share this post with you from Take A Closer Look Ministries &amp;body=Video Test    https://takeacloserlookministries.com/video-test/" title="Email to a friend/colleague">
                             <ion-icon name="mail"></ion-icon>
                         </a>
-                        <a href="">
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftakeacloserlookministries.com%2Fvideo-test%2F" target="_blank">
                             <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </div>

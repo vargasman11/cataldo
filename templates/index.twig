@@ -7,20 +7,23 @@
         <div class="col-12 col-lg-8  p-0 video-featured-entry">
             {% set videoEntries = craft.entries().section('blog').limit(1) %}
             {% for entry in videoEntries %}
-                <div class="index-card p-5">
+                <div class="index-card">
+                    {% set images = entry.pageEntyImage %}
+                    <a href="{{ entry.url }}" style=" background-image: url('{% for img in images %}{{ img.getUrl() }}{% endfor %}'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 28vh; width: 100%;">
+
                     {% set categories = entry.category %}
                     {% if categories|length %}
                         {% for rel in categories %}
-                            <a class="index-card-cat"> {{ rel.title }}</a>
+                            <a class="index-card-cat mt-5"> {{ rel.title }}</a>
                         {% endfor %}
                     {% endif %}
-                    <h1 class="text-center"><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
+                    <h1 class="text-center px-3"><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
                     <div class="index-card-auth">by {{ entry.author }} on {{ entry.postDate|date }}</div>
                     <hr>
                     <a class="index-card-cta" href="{{ entry.url }}">
                         <ion-icon name="book"></ion-icon>
                        &nbsp; Read article</a>
-                    <div class="index-card-socials">
+                    <div class="index-card-socials pb-3">
                         <a href="https://www.facebook.com/TakeACloserLookMinistries1/" target="_blank">
                             <ion-icon name="logo-facebook"></ion-icon>
                         </a>
