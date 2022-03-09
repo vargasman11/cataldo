@@ -9,7 +9,7 @@
             {% for entry in videoEntries %}
                 <div class="index-card">
                     {% set images = entry.pageEntyImage %}
-                    <a href="{{ entry.url }}" style=" background-image: url('{% for img in images %}{{ img.getUrl() }}{% endfor %}'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 28vh; width: 100%;">
+                    <a href="{{ entry.url }}" style=" background-image: url('{% for img in images %}{{ img.getUrl() }}{% endfor %}'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 40vh; width: 100%;">
 
                     {% set categories = entry.category %}
                     {% if categories|length %}
