@@ -1,4 +1,4 @@
-dateModified: 1646792893
+dateModified: 1647136825
 email:
   fromEmail: takeacloserlookministries1@gmail.com
   fromName: takeacloserlookministries1@gmail.com
@@ -126,6 +126,7 @@ plugins:
   seomatic:
     edition: standard
     enabled: true
+    licenseKey: BLERXSE0WDK8QABLCDVV6J59
     schemaVersion: 3.0.11
     settings:
       addHrefLang: true
