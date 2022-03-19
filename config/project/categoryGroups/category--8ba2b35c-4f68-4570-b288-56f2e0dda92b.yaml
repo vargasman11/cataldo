@@ -34,7 +34,7 @@ name: category
 siteSettings:
   0f6e04df-ce19-4a89-b89d-e879e822e087: # cataldo
     hasUrls: true
-    template: null
+    template: category\index.twig
     uriFormat: 'category/{slug}'
 structure:
   maxLevels: 1

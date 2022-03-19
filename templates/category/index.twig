@@ -1,0 +1,55 @@
+{% include 'partials/_header.twig' %}
+{% include 'partials/_nav.twig' %}
+<div class="container">
+    <div class="row">
+        <div class="col-10 col-lg-8 mx-auto p-0 video-featured-entry">
+            {% set videoEntries = craft.entries().section('videos').all() %}
+            <h1> Categories: Videos</h1>
+            {% set myCategoryQuery = craft.categories() %}
+            {% for entry in myCategoryQuery %}
+                <div class="index-card pb-2">
+                    {% set images = entry.pageEntyImage %}
+                    {#                    <a href="{{ entry.url }}" style=" background-image: url('{% for img in images %}{{ img.getUrl() }}{% endfor %}'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 40vh; width: 100%;">#}
+                    <a href="{{ entry.url }}" style="">
+                        <img class="img-fluid" src="{% for img in images %}{{ img.getUrl() }}{% endfor %}" alt="">
+                    </a>
+
+                    {% set categories = entry.category %}
+                    {% if categories|length %}
+                        {% for rel in categories %}
+                            <a class="index-card-cat mt-5"> {{ rel.title }}</a>
+                        {% endfor %}
+                    {% endif %}
+                    <h1 class="text-center"><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
+{#                    <div class="index-card-auth">by {{ entry.author }} on {{ entry.postDate|date }}</div>#}
+                    <hr>
+                    <a class="index-card-cta" href="{{ entry.url }}">
+                        <ion-icon name="book"></ion-icon>
+                        &nbsp; Read article</a>
+                    <div class="index-card-socials">
+                        <a href="https://www.facebook.com/TakeACloserLookMinistries1/" target="_blank">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://m.youtube.com/channel/UCRCsP7R_HPvW8cG0rSMYvYg" target="_blank">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/ryan.cataldo.3/" target="_blank">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="mailto:?subject=I wanted to share this post with you from Take A Closer Look Ministries &amp;body=Video Test    https://takeacloserlookministries.com/video-test/" title="Email to a friend/colleague">
+                            <ion-icon name="mail"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+
+        {% block main %}
+
+        {% endblock %}
+        {% include 'components/_sidebar.twig' %}
+    </div>
+</div>
+
+{% include 'partials/_footer.twig' %}
