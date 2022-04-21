@@ -6,7 +6,7 @@
                 {% for entry in Entries %}
                     {% set images = entry.pageEntyImage %}
                     <div class="carousel_item" {% for img in images %} style="background-image: url({{ img.getUrl() }})" {% endfor %}>
-                        <a href="">
+                        <a href="{{ entry.url }}">
                         {% set categories = entry.category %}
                         {% if categories|length %}
                         {% for rel in categories %}
