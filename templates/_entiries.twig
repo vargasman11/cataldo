@@ -8,7 +8,21 @@
 
                     <!-- SET IMAGES -->
                     {% set images = entry.pageEntyImage %}
-                    <div class="img-container" {% for img in images %} style="background-image: url({{ img.url }})" {% endfor %}></div>
+{#                    <div class="img-container" {% for img in images %} style="background-image: url({{ img.url }})" {% endfor %}></div>#}
+{#                    <div class="" style="max-height: 300px">#}
+                        <div class="">
+                        {% for img in images %}
+                            {% do img.setTransform({ width:900 }) %}
+                            {{ tag('img', {
+                                class:"img-fluid",
+                                src: img.url,
+                                width: img.width,
+                                height: img.height,
+                                srcset: img.getSrcset(['1.5x', '2x', '3x']),
+                                alt: img.title,
+                            }) }}
+                        {% endfor %}
+                    </div>
 
                     <!-- SET CATEGORY -->
                     {% set relatedCategories = entry.category.all() %}
