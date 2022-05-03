@@ -2,12 +2,24 @@
 {% include 'partials/_nav.twig' %}
 <div class="container">
     <div class="row">
-        <div class="col-12 col-lg-8  p-0 video-featured-entry d-block">
+        <div class="col-11 col-lg-8  p-0 video-featured-entry d-block mx-auto">
             {% set videoEntries = craft.entries().section('videos').all() %}
             {% for entry in videoEntries %}
                 <div class="index-card pb-5">
                     {% set images = entry.pageEntyImage %}
-                    <a href="{{ entry.url }}" style=" background-image: url('{% for img in images %}{{ img.getUrl() }}{% endfor %}'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 28vh; width: 100%;">
+{#                    <a href="{{ entry.url }}" style=" background-image: url('{% for img in images %}{{ img.getUrl() }}{% endfor %}'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 28vh; width: 100%;">#}
+                    <a href="{{ entry.url }}">
+                        {% for img in images %}
+                            {% do img.setTransform({ width:900 }) %}
+                            {{ tag('img', {
+                                class:"img-fluid",
+                                src: img.url,
+                                width: img.width,
+                                height: img.height,
+                                srcset: img.getSrcset(['1.5x', '2x', '3x']),
+                                alt: img.title,
+                            }) }}
+                        {% endfor %}
                     </a>
 
                     {% set categories = entry.category %}
